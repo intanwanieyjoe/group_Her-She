@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!------------------------- CSS ------------------------->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    />
+
+    <title>Product</title>
+
+    <style>
+      .buy {
+        background-color: #ffd700;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        width: 70px;
+      }
+
+      .bg-pink {
+        background-color: #db7093;
+      }
+    </style>
+  </head>
+  <body onload="readCheckboxes()">
+    <!------------------------- LOGO ------------------------->
+    <section class="top">
+      <div>
+        <a href="home.html">
+          <a href="orderpage.html"><i class="fas fa-shopping-cart"></i></a>
+          <a href="loginsignup.html"><i class="fas fa-user-circle"></i></a>
+          <a href=""><i class="fas fa-search"></i></a>
+          <a href="home.html"
+            ><img src="Images/logo.jpg" alt="" width="200px" height="200px"
+          /></a>
+          <a href="home.html">
+            <img
+              id="title"
+              src="Images/her.png"
+              width="500px"
+              height="200px"
+              alt=""
+              style="margin-top: -194px; margin-left: 523px; height: 200px"
+            />
+          </a>
+        </a>
+      </div>
+    </section>
+
+    <!------------------------- HEADER SECTION ------------------------->
+    <section class="navigation">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="new.html">New</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="sale.html">Sale</a></li>
+      </ul>
+    </section>
+
+    <center>
+      <div
+        style="background-color: palevioletred; padding-top: 50px"
+        class="pb-12"
+      >
+        <b
+          ><h1
+            style="
+              font-size: 22px;
+              color: #ffffff;
+              border: 1px solid #ffffff;
+              margin: 0px 40%;
+            "
+          >
+            Our Products
+          </h1></b
+        >
+      </div>
+    </center>
+
+    <!------------------------- MAIN CONTENT ------------------------->
+    <main class="min-h-fit bg-pink text-white flex justify-center pb-12">
+      <div class="grid grid-cols-1">
+        <div
+          class="flex items-end my-4 text-xl tracking-widest uppercase text-gray-700 text-extrabold"
+        >
+          <div class="myBtnContainer mx-auto uppercase">
+            <button
+              class="filterButton py-2 px-1 hover:text-white text-white uppercase"
+            >
+              Printed Shawl
+            </button>
+            <!--
+                    <button class="filterButton hover:text-white py-2 px-1 uppercase">Persons</button>
+                    <button class="filterButton hover:text-white py-2 px-1 uppercase">Animals</button>
+                    <button class="filterButton hover:text-white py-2 px-1 uppercase">Fruits</button>
+    -->
+          </div>
+        </div>
+
+        <!------------------------- SLIDER ------------------------->
+        <div class="container swiper-container h-96">
+          <div class="swiper-wrapper h-96">
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Printed\ Shawl/royalprintedshawl.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Royal Printed Shawl
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 18</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('printedshawl', 'royalprintedshawl', 0), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Printed\ Shawl/beboldhsawl.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">Be Bold Shawl</h2>
+                    <p class="text-base text-gray-900 font-normal">RM 20</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('printedshawl', 'beboldshawl', 0), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Printed\ Shawl/hershemonogramshawl.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Herdshe Monogram Shawl
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 22</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('printedshawl', 'hershemonoramshawl', 0), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Printed\ Shawl/celinelongshawl.jpg);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Celine Long Shawl
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 20</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('printedshawl', 'celinelongshawl', 0), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Printed\ Shawl/dianprintedshawl.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Dian Printed Shawl
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 18</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('printedshawl', 'dianprintedshawl', 0), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?kid)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?man)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?woman)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?kid)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+-->
+          </div>
+          <!-- next / prev arrows -->
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+      </div>
+    </main>
+
+    <main class="min-h-fit bg-pink text-white flex justify-center pb-12">
+      <div class="grid grid-cols-1">
+        <div
+          class="flex items-end my-4 text-xl tracking-widest uppercase text-gray-700 text-extrabold"
+        >
+          <div class="myBtnContainer mx-auto uppercase">
+            <button
+              class="filterButton py-2 px-1 hover:text-white text-white uppercase"
+            >
+              Plain Shawl
+            </button>
+            <!--
+                    <button class="filterButton hover:text-white py-2 px-1 uppercase">Persons</button>
+                    <button class="filterButton hover:text-white py-2 px-1 uppercase">Animals</button>
+                    <button class="filterButton hover:text-white py-2 px-1 uppercase">Fruits</button>
+    -->
+          </div>
+        </div>
+
+        <!------------------------- SLIDER ------------------------->
+        <div class="container swiper-container h-96">
+          <div class="swiper-wrapper h-96">
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Plain\ Shawl/windypleatedshawl.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Windy Pleated Shawl
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 20</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('plainshawl', 'windypleatedshawl', 1), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Plain\ Shawl/sophiapleatedshawl.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Sophia Pleated Shawl
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 18</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('plainshawl', 'sophiapleatedshawl', 1), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Plain\ Shawl/ixoralongshawl.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Ixora Long Shawl
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 22</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('plainshawl', 'ixoralongshawl', 1), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Plain\ Shawl/thalialongshawl.jpg);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Thalia Long Shawl
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 20</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('plainshawl', 'thalialongshawl', 1), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Plain\ Shawl/inarapleatedshawl.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Inara Pleated Shawl
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 24</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('plainshawl', 'inarapleatedshawl', 1), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?kid)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?man)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?woman)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?kid)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+-->
+          </div>
+          <!-- next / prev arrows -->
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+      </div>
+    </main>
+
+    <main class="min-h-fit bg-pink text-white flex justify-center pb-12">
+      <div class="grid grid-cols-1">
+        <div
+          class="flex items-end my-4 text-xl tracking-widest uppercase text-gray-700 text-extrabold"
+        >
+          <div class="myBtnContainer mx-auto uppercase">
+            <button
+              class="filterButton py-2 px-1 hover:text-white text-white uppercase"
+            >
+              Square Edition
+            </button>
+            <!--
+                    <button class="filterButton hover:text-white py-2 px-1 uppercase">Persons</button>
+                    <button class="filterButton hover:text-white py-2 px-1 uppercase">Animals</button>
+                    <button class="filterButton hover:text-white py-2 px-1 uppercase">Fruits</button>
+    -->
+          </div>
+        </div>
+
+        <!------------------------- SLIDER ------------------------->
+        <div class="container swiper-container h-96">
+          <div class="swiper-wrapper h-96">
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Square\ Edition/tasneembasicsquare.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Tasneem Basic Square
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 14</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('squareedition', 'tasneembasicsquare', 2), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Square\ Edition/dahliaprintedsquare.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Dahlia Printea Square
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 10</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('squareedition', 'dahliaprintedsquare', 2), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Square\ Edition/aurorabasicsquare.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Aurora Basic Square
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 12</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('squareedition', 'aurorabasicsquare', 2), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Square\ Edition/mawareditionsquare.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Mawar Edition Square
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 12</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('squareedition', 'mawareditionsquare', 2), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide persons">
+              <div
+                class="h-full flex flex-col justify-center opacity-75 hover:opacity-100"
+              >
+                <div
+                  class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center"
+                  style="
+                    background-image: url(Images/Product/Square\ Edition/wardabasicsquare.png);
+                  "
+                >
+                  <div
+                    class="text-center bg-white opacity-75 py-2 w-full rounded-lg"
+                  >
+                    <h2 class="text-xl text-black font-bold">
+                      Warda Basic Square
+                    </h2>
+                    <p class="text-base text-gray-900 font-normal">RM 10</p>
+                    <button
+                      class="text-base text-gray-900 font-normal buy"
+                      onclick="addCart('squareedition', 'wardabasicsquare', 2), alert('Item added to cart')"
+                    >
+                      Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?kid)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?man)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?woman)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide persons">
+                    <div class="h-full flex flex-col justify-center opacity-75 hover:opacity-100">
+                        <div class="rounded-lg h-full w-full bg-cover bg-center justify-end flex flex-col justify-end items-center" style="background-image:url(https://source.unsplash.com/random/?kid)">
+                            <div class="text-center bg-white opacity-75 py-2 w-full rounded-lg">
+                                <h2 class="text-xl text-black font-bold">Royal Printed Shawl</h2>
+                                <p class="text-base text-gray-900 font-normal">RM 18</p>
+                                <button class="text-base text-gray-900 font-normal buy">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+-->
+          </div>
+          <!-- next / prev arrows -->
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+      </div>
+    </main>
+    <div style="display: none">
+      <form>
+        Royal Printed Shawl
+        <input
+          type="checkbox"
+          class="boxes"
+          id="royalprintedshawl"
+          value="Royal Printed Shawl"
+          onclick="orderitem('printedshawl', 0), save()"
+        />
+        Behold Shawl
+        <input
+          type="checkbox"
+          class="boxes"
+          id="beboldshawl"
+          value="Bebold Shawl"
+          onclick="orderitem('printedshawl', 0), save()"
+        />
+        Herashe Monogram Shawl
+        <input
+          type="checkbox"
+          class="boxes"
+          id="hershemonoramshawl"
+          value="Hershe Monoram Shawl"
+          onclick="orderitem('printedshawl', 0), save()"
+        />
+        Cesine Long Shawl
+        <input
+          type="checkbox"
+          class="boxes"
+          id="celinelongshawl"
+          value="Celine Long Shawl"
+          onclick="orderitem('printedshawl', 0), save()"
+        />
+        Dian Printed Shawl
+        <input
+          type="checkbox"
+          class="boxes"
+          id="dianprintedshawl"
+          value="Dian Printed Shawl"
+          onclick="orderitem('printedshawl', 0), save()"
+        />
+      </form>
+      <form>
+        Windy Pleated Shawl
+        <input
+          type="checkbox"
+          class="boxes"
+          id="windypleatedshawl"
+          value="Windy Pleated Shawl"
+          onclick="orderitem('plainshawl', 1), save()"
+        />
+        Sophia Pleated Shawl
+        <input
+          type="checkbox"
+          class="boxes"
+          id="sophiapleatedshawl"
+          value="Sophia Pleated Shawl"
+          onclick="orderitem('plainshawl', 1), save()"
+        />
+        Ixora Long Shawl
+        <input
+          type="checkbox"
+          class="boxes"
+          id="ixoralongshawl"
+          value="Ixora Long Shawl"
+          onclick="orderitem('plainshawl', 1), save()"
+        />
+        Thasia Long Shawl
+        <input
+          type="checkbox"
+          class="boxes"
+          id="thalialongshawl"
+          value="Thalia Long Shawl"
+          onclick="orderitem('plainshawl', 1), save()"
+        />
+        Inara Pleated Shawl
+        <input
+          type="checkbox"
+          class="boxes"
+          id="inarapleatedshawl"
+          value="Inara Pleated Shawl"
+          onclick="orderitem('plainshawl', 1), save()"
+        />
+      </form>
+      <form>
+        Tasneem Basic Square
+        <input
+          type="checkbox"
+          class="boxes"
+          id="tasneembasicsquare"
+          value="Tasneem Basic Square"
+          onclick="orderitem('squareedition', 2), save()"
+        />
+        Dahlia Print Square
+        <input
+          type="checkbox"
+          class="boxes"
+          id="dahliaprintedsquare"
+          value="Dahlia Printed Square"
+          onclick="orderitem('squareedition', 2), save()"
+        />
+        Aurora Basic Square
+        <input
+          type="checkbox"
+          class="boxes"
+          id="aurorabasicsquare"
+          value="Aurora Basic Square"
+          onclick="orderitem('squareedition', 2), save()"
+        />
+        Mawar Edition Square
+        <input
+          type="checkbox"
+          class="boxes"
+          id="mawareditionsquare"
+          value="Mawar Edition Square"
+          onclick="orderitem('squareedition', 2), save()"
+        />
+        Warda Basic Square
+        <input
+          type="checkbox"
+          class="boxes"
+          id="wardabasicsquare"
+          value="Warda Basic Square"
+          onclick="orderitem('squareedition', 2), save()"
+        />
+      </form>
+    </div>
+
+    <!------------------------- FOOTER SECTION ------------------------->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="about.html">about us</a></li>
+              <li><a href="product.html">our product</a></li>
+              <li><a href="about.html#stores-id">our store</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li>
+                <a href="about.html#contact-id">contact us</a>
+              </li>
+              <li><a href="orderpage.html">shipping & order</a></li>
+              <li><a href="orderpage.html">return & refund</a></li>
+              <li><a href="orderpage.html">track orders</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100077544034224"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  Her&She
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://www.instagram.com/her.she_scarves/"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  Her&She
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://vt.tiktok.com/ZSeVjSVV1/"
+                    ><i class="fab fa-tiktok"></i
+                  ></a>
+                  Her&She
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://wa.me/message/NCK5EOEE2AHAO1"
+                    ><i class="fab fa-whatsapp"></i
+                  ></a>
+                  Her&She
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-col" style="border-left: solid 1px whitesmoke">
+            <h4>Newsletter</h4>
+            <p style="color: whitesmoke">
+              Subscribe to our Newsletter for more
+            </p>
+            <br />
+            <input
+              type="email"
+              placeholder="your@address.com"
+              style="border: 0.5px solid black; font-size: 13px"
+            />
+            <button
+              style="
+                background-color: #ffffff;
+                border: 0.5px solid black;
+                font-size: 13px;
+              "
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!------------------------- JAVASCRIPT ------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
+<script src="JS/cardcarousel.js"></script>
+<script src="JS/note.js"></script>
